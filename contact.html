@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contactStyle.css">
+    <title>İletişim Sayfası</title>
+    <script>
+        function displayFormValues(event) {
+            event.preventDefault(); // Formun gönderilmesini engeller
+
+            // Form alanlarındaki değerleri alır
+            const name = document.getElementById('name').value;
+            const surname = document.getElementById('surname').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Alınan değerleri aşağıda gösterir
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <h2>Girdiğiniz Bilgiler</h2>
+                <p><strong>İsim:</strong> ${name}</p>
+                <p><strong>Soyad:</strong> ${surname}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Konu:</strong> ${subject}</p>
+                <p><strong>Mesaj:</strong> ${message}</p>
+            `;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <h1>İletişim Sayfası</h1>
+    <form onsubmit="displayFormValues(event)">
+    <form action="#" method="post">
+        <label for="name">İsim:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="name">Soyad:</label><br>
+        <input type="text" id="surname" name="surname"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="subject">Konu:</label><br>
+        <input type="text" id="subject" name="subject"><br><br>
+        <label for="message">Mesaj:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Gönder">
+    </form>
+    <div id="result"></div>
+</div>
+</body>
+</html>

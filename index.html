@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS dosyasını bağlama -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/javaScript.js"></script>
+</head>
+
+<body>
+    <h1>CARPET</h1>
+    <a href="contact.html">İletişim Sayfası</a>
+    <br>
+    <button onclick="changeColor()">Arkaplan Renk Değiştir</button>
+    <br>
+    <button onclick="changeColorReverse()">Arkaplan Rengini Eski Haline Döndür</button>
+    <br>
+    <button onclick="showMessage()">Mesaj Göster</button>
+    <br>
+    <button id="toggle-button">Gizliyi Göster</button>
+    <br>
+    <form name="myForm" onsubmit="return validateForm()">
+        İsim: <input type="text" name="fname">
+        <br>
+        <input type="submit" value="Gönder">
+        <br>
+    </form>
+
+    <div id="hiddenDiv" style="display: none;">Bu bir gizli div.</div>
+    <button id="change-input-bg">Input Giriş Arka Planını Değiştir</button>
+    <button onclick="changeImageSizeBig()">Resim Boyutunu Büyült</button>
+    <button onclick="changeImageSizeSmall()">Resim Boyutunu Küçült</button>
+    <button onclick="makeImagesRound()">Resim Çerçevesini Yuvarla</button>
+    
+    <img src="image/hali1.jpeg" alt="Büyük Resim">
+
+    <div class="filled-divi" id="image-container">
+    </div>
+    <!-- 50 adet dolu div etiketi -->
+    <div class="filled-div">
+        <img src="image/hali2.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali3.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali4.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali5.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali6.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali7.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali8.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali9.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali10.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali11.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali12.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali13.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali14.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali15.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali16.jpeg" alt="arapResim">
+    </div>  
+    <div class="filled-div">
+        <img src="image/hali17.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali18.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali19.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali20.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali21.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali22.jpeg" alt="arapResim">
+    </div>    
+    <div class="filled-div">
+        <img src="image/hali23.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali24.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali25.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali26.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali27.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali28.jpeg" alt="arapResim">
+    </div> 
+    <div class="filled-div">
+        <img src="image/hali29.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali30.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali31.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali32.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali33.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali34.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali35.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali36.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali37.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali38.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali39.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali40.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali41.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali42.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali43.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali44.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali45.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali46.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali47.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div">
+        <img src="image/hali48.jpeg" alt="arapResim">
+    </div>
+    <div class="filled-div" >
+        <img src="image/hali49.jpeg" alt="arapResim">
+    </div>
+    <br>
+
+    <!-- İframe -->
+    <iframe  src="https://www.youtube.com/embed/Lr2-dNa2Nqg?si=9t5g2_8MkY7MBabN" width="600" height="400"></iframe>
+
+    <br>
+    <br>
+    
+    <div class="filled-span" id= "faq-container">
+        <br><br><br><br><br>
+        <h4 style="font-style:initial">Sıkça Sorulan Sorular</h4>
+        <span class="filled-span">
+            Bu başlık altında bize en çok yöneltilen soruları 
+            görebilirsiniz. Eğer bunların dışında merak ettikleriniz 
+            bulunuyorsa da bizimle iletişime geçerek düşüncelerinizi 
+            ve merak ettiklerinizi aktarabilirsiniz.</span>
+        <br>
+        <h4 style="font-style:initial">El Dokuma Halı Nedir?</h4>
+        <span class="filled-span"> 
+            El dokuma halılar makine işçiliği ya da fabrikasyon olmayan
+             halılardır. El düğümü ile kendine özel tezgahlarda
+              dokunmaktadır. Yün, ipek ya da bunların karışımı olacak 
+              şekilde imal edilebilmektedir. Retro Halı tarafından
+               sunulan tüm ürünler elde dokunmaktadır.</span>
+        <br>
+        <h4 style="font-style:initial">Vintage Halı Nedir?</h4>
+        <span class="filled-span">
+            Vintage halı modelleri geçmişin hikayesini günümüze 
+            yansıtmaktadır. Geçmişin hikayesini bugüne yansıtan 
+            bu ürünler, bu tarzı sevenlere büyük imkanlar sunar. 
+            Farklı modelleri inceleyebilir, aralarından size en uygun
+             olanları tercih edebilirsiniz.  
+        </span>
+        <br>
+        <h4 style="font-style:initial">İran Halısı Nedir?</h4>
+        <span class="filled-span">
+            Acem halısı olarak da bilinen İran halısı Türkiye’de 
+            yapılan dokumalara göre daha farklıdır. Kadife gibi parlak 
+            ve yumuşa yapıda olup  her bir santimetresinde 10 ile 14 düğüm bulunur.
+             Genellikle koyu renk ve desenlerden meydana gelen, ipek halılardır.</span>       
+        <br>
+        <h4 style="font-style:initial">El Dokuma Halı Nasıl Anlaşılır?</h4>
+        <span class="filled-span">
+            El dokuması bir halı arkasına bakarak kolay bir şekilde 
+            anlaşılabilir. Ayrıca düğümlere de göz atılabilir. 
+            Şayet düz şerit çizgiler gibi düğüm izleri varsa makine 
+            halısı olduğunu gösterir. Ancak asimetrik şekilde,
+            ara ara düğümler bulunuyorsa elde dokunduğuna işaret eder.
+            Retro Halı sizlere orijinal ve el dokuması sunmaktadır.</span>
+        <br>
+        <h4 style="font-style:initial">El Dokuma Yün Halı</h4>
+        <span class="filled-span"> 
+            El dokuma yün halı koyun yetiştiricilerinin dağlarda ve 
+            ovalarda yetiştirdiği koyunlardan, zamanında kırkılan 
+            yünlerden imal edilir. Kırkım işlemleri tamamlandıktan 
+            sonra özelliklerine göre sınıflara ayrılmakta, ardından da 
+            işleme sokulmaktadır. Bunlardan yararlanılarak yapılan 
+            halılar, özellikle kış aylarında yaşam alanına daha sıcak 
+            ortama yardımcı olmaktadır. Tüylenme yapmadığı, kolay bir 
+            şekilde temizlenebildiği için avantajlıdır. Renk ve 
+            motifleri de farklılık gösterir.
+            </span>
+        <br>
+        <h4 style="font-style:initial">El Dokuma Eskitme Halı</h4>
+        <span class="filled-span">
+            El dokuma eskitme halı geçmiş dönemlerde imal edilen halıların 
+            toplanıp, tamir işlemlerinden geçirildikten sonra eskitme görüntüsü 
+            verilerek sunulmasıdır. Eğer retro ve vintage tarzlarını seviyorsanız, 
+            bu modeller yaşam alanlarınız için güzel bir tercihtir. 
+            Sade renk ve motiflerden görkemli işlemelere kadar farklı 
+            seçenekler vardır. Bu bakımdan eskitme halı kapsamında 
+            zevklerinizi en iyi yansıtana kolay bir şekilde ulaşmanız mümkündür.</span>
+        <br>
+        <h4 style="font-style:initial">El Dokuma Halı Çeşitleri</h4>
+        <span class="filled-span">
+            El dokuma halı çeşitleri geniş bir yapıya sahiptir. 
+            1-2 metrekareden 12 metrekareye kadar farklı ölçüler vardır. 
+            Stillerine göre Patchwork, Modern, Klasik, Boyalı, Etnik, Bohem, 
+            Vintage, el dokuma gibi modeller bulunur. Yörelere göre seçenekler 
+            arasında da Yağcıbedir, Taşpınar, Anadolu, İran ve Türk halıları 
+            vardır. Her birinde teknik özellikler değişmekte olup tümünü 
+            inceleyebilir, aralarından sizlere göre tercih yapabilirsiniz.
+            </span>
+        <br>
+        <h4 style="font-style:initial">El Dokuma Halı Değeri Nasıl Anlaşılır?</h4>
+        <span class="filled-span">
+            El dokuma halı değeri nasıl anlaşılır zor gibi görülse de 
+            oldukça kolaydır. Eğer detaylı bir şekilde incelerseniz, 
+            ayrıntılı bilgilere sahip olabilir. Eski halı değeri farklı 
+            maddelere göre belirlenmektedir. Halının kaç yaşında olduğu, 
+            nerede dokunduğu, sahip olduğu desen ve renkleri, nadir olup 
+            olmadığı da fiyatlar üzerinde önemlidir. Ayrıca halının kaç 
+            metrekare olduğu da fiyatları etkilemektedir.
+            
+        </span>
+        <br>
+        <h4 style="font-style:initial">El Dokuma Halı İsimleri</h4>
+        <span class="filled-span">
+            <span class="span"></span>
+           
+            El dokuma halı isimleri oldukça geniştir. 
+            Yöresine göre halılar Yağcıbedir Halısı, Taşpınar Halısı, 
+            Anadolu Halısı, İran halısı ve Türk Halısı şeklindedir. 
+            Stillere göre halılar Vintage Halı, Bohem Halı, 
+            Etnik Halı, Boyalı Halı, Klasik Halı, Modern Halı, 
+            Patchwork Halı, El Dokuma Halı seçenekleri yer 
+            almaktadır. Ebat olarak da 1-2, 3, 4, 5, 6 ve farklı 
+            seçenekler vardır.<br></span>
+            </span>
+           
+
+            <br>
+            <button id="button1">Divlerin Rengini Kırmızı Yap</button>
+            <button id="button2">Divlerin Rengini Eski Haline Döndür</button>
+            <button onclick="changeColor()">Arka Planı Maviye Çevir</button>
+            <button onclick="changeColorReverse()">Arka Planı Beyaza Çevir</button>
+            <button id="uppercase-button">Metni Büyük Harfe Dönüştür</button>
+            <button id="makeTextLowercase">Metni Küçük Harfe Dönüştür</button>
+            <button onclick="changeParagraphStyle()">Paragraf Stilini Değiştir</button>
+            <button onclick="changeParagraphSizeBig()">Paragraf Boyutunu Büyük Yap</button>
+            <button onclick="changeParagraphSizeSmall()">Paragraf Boyutunu Küçük yap</button>
+            <button id="add-paragraph-button">Yeni Paragraf Ekle</button>
+            <button id="buttonhide">Gizle</button>
+            <button id="buttonshow">Göster</button>
+    </div>
+        
+</body>
+</html>
+<script>
+$(document).ready(function()
+    {
+
+    //1 Tüm <p> paragraflarını seç ve arka plan rengini değiştir
+        $("span").css("background-color", "white");
+        
+        
+    //2 bütün spanları butonla gizleme
+        $(document).ready(function(){
+            $("#buttonhide").click(function(){
+                $("h4").hide(1000);
+        });
+
+        $("#buttonshow").click(function(){
+            $("h4").show(1000);
+        });
+    //4 ınput giriş kısmının rengini gri yap
+        $(document).ready(function(){
+            $("#change-input-bg").click(function(){
+                $("form[name='myForm'] input[name='fname']").css("background-color", "#cccccc");
+            });
+        });
+
+    //5 Fareyi oynattığımız zaman spanların rengi değiştir
+        $(document).ready(function(){
+            $("span").on({
+                mouseenter: function(){
+                  $(this).css("background-color", "lightgray");
+                },  
+                mouseleave: function(){
+                  $(this).css("background-color", "lightblue");
+                } 
+                }); 
+         });
+        });
+        
+        //6. Arka plan rengini maviye çevirme
+            $("#change-bg-color").click(function() {
+                $("body").css("background-color", "lightred");
+            });
+            
+        // 7. Yeni paragraf ekleme
+        $("#add-paragraph-button").click(function() {
+                var newParagraph = $("<span>").text("El Dokuma Halı: El dokuma halılar makine işçiliği ya da fabrikasyon olmayan halılardır. El düğümü ile kendine özel tezgahlarda dokunmaktadır. Yün, ipek ya da bunların karışımı olacak şekilde imal edilebilmektedir.");
+                $("#faq-container").append(newParagraph);
+            });
+        
+    
+
+    });</script>
